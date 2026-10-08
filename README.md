@@ -20,14 +20,14 @@ Open `/mcp`, choose the OfferUnderway server and authenticate with your OfferUnd
 Server URL: `https://api.offerunderway.com/mcp`. Authentication: OAuth. Sign in to OfferUnderway and review the permissions shown by the consent screen.
 
 - ChatGPT: open Plugins → + → Add custom MCP server, choose OAuth, create the plugin and install it. If the deployed server rejects published-identity registration, select Dynamic Client Registration (DCR) in Advanced settings.
-- Claude: open Customize → Connectors → Add custom connector. Add the URL, select Sign in now and Register automatically, then connect.
+- Claude: open [OfferUnderway in the connector directory](https://claude.ai/directory/offerunderway), choose Connect, and sign in to your OfferUnderway account.
 - Codex: run `codex mcp add offerunderway --url https://api.offerunderway.com/mcp`, then `codex mcp login offerunderway`.
 - Claude Code: run `claude mcp add --scope user --transport http offerunderway https://api.offerunderway.com/mcp`, then use `/mcp` → offerunderway → Authenticate.
 - Cursor: add an HTTP MCP server with the URL in MCP settings and follow its OAuth prompt.
 
 Select OfferUnderway in a new conversation and ask: “Use OfferUnderway to call get_offerunderway_context and tell me whether my career profile is ready. Do not generate materials or submit applications yet.”
 
-Hosted tool availability depends on the deployed server. The bundled workflow skill discovers available tools and supports both workflow and application-pack interfaces. The current release exposes twelve profile, search, document-pack and application-tracking tools. Installation alone does not verify that a tool call succeeds. The plugin package can be installed directly; public listings in the ChatGPT and Claude directories are pending and must not be treated as provider approval.
+Hosted tool availability depends on the deployed server. The bundled workflow skill discovers available tools and supports both workflow and application-pack interfaces. The current release exposes twelve profile, search, document-pack and application-tracking tools. Installation alone does not verify that a tool call succeeds. OfferUnderway is published in Claude's directory as a Community connector, which undergoes automated review and does not carry Anthropic Verified status. The ChatGPT directory listing remains pending developer identity verification and submission.
 
 ## Privacy and support
 
