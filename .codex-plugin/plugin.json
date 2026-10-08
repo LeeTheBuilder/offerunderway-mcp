@@ -1,0 +1,47 @@
+{
+  "name": "offerunderway",
+  "version": "0.2.1",
+  "description": "Connect your OfferUnderway career profile and manage resumes, jobs and applications from your AI assistant.",
+  "author": {
+    "name": "OfferUnderway",
+    "email": "admin@offerunderway.com",
+    "url": "https://offerunderway.com"
+  },
+  "homepage": "https://offerunderway.com/integrations/ai",
+  "keywords": [
+    "career",
+    "resume",
+    "jobs",
+    "applications",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OfferUnderway",
+    "shortDescription": "Manage your job search",
+    "longDescription": "Check your saved career profile, find matching jobs, tailor application materials and track your job search. Available actions depend on the connected server and the permissions you approve.",
+    "developerName": "OfferUnderway",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://offerunderway.com/integrations/ai",
+    "privacyPolicyURL": "https://offerunderway.com/privacy",
+    "termsOfServiceURL": "https://offerunderway.com/terms",
+    "defaultPrompt": [
+      "Check whether my career profile is ready.",
+      "Tailor my resume for this job.",
+      "Show my recent applications."
+    ],
+    "brandColor": "#00685F",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  },
+  "mcpServers": "./.mcp.json",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
+  }
+}
