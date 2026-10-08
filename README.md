@@ -27,7 +27,11 @@ Server URL: `https://api.offerunderway.com/mcp`. Authentication: OAuth. Sign in 
 
 Select OfferUnderway in a new conversation and ask: “Use OfferUnderway to call get_offerunderway_context and tell me whether my career profile is ready. Do not generate materials or submit applications yet.”
 
-Hosted tool availability depends on the deployed server. The bundled workflow skill discovers available tools and supports both workflow and application-pack interfaces. The current deployed server exposes thirteen profile, search, document-pack and application-tracking tools. Installation alone does not verify that a tool call succeeds. OfferUnderway is published in Claude's directory as a Community connector, which undergoes automated review and does not carry Anthropic Verified status. The ChatGPT directory draft is uploaded, developer identity and domain verification are complete, and both skills passed checks. OAuth configuration and private reviewer credentials are complete. Final policy approval and provider review remain pending.
+Hosted tool availability depends on the deployed server. The bundled workflow skill discovers available tools and supports both workflow and application-pack interfaces. The current deployed server exposes thirteen profile, search, document-pack and application-tracking tools. Installation alone does not verify that a tool call succeeds. OfferUnderway is published in Claude's directory as a Community connector, which undergoes automated review and does not carry Anthropic Verified status. The ChatGPT directory submission is in review as of 9 October 2026. Developer identity, domain verification, both skill checks, OAuth configuration and private reviewer credentials are complete. Public ChatGPT directory publication awaits OpenAI approval.
+
+## Review walkthrough
+
+The [approved 1:34 review video](https://github.com/LeeTheBuilder/offerunderway-mcp/releases/download/v0.2.1/offerunderway-connection-demo.mp4) covers five positive and three negative cases using an edited walkthrough of recorded MCP responses, narrated with ElevenLabs. It uses labelled fictional data and omits credentials and private download URLs. It is not a continuous ChatGPT conversation or an employer submission demonstration. On 9 October 2026 it replaced the earlier readiness clip at the same URL used by the submitted package; package ZIPs and Git tags are unchanged.
 
 ## Privacy and support
 
