@@ -27,7 +27,7 @@ Server URL: `https://api.offerunderway.com/mcp`. Authentication: OAuth. Sign in 
 
 Select OfferUnderway in a new conversation and ask: “Use OfferUnderway to call get_offerunderway_context and tell me whether my career profile is ready. Do not generate materials or submit applications yet.”
 
-Hosted tool availability depends on the deployed server. The bundled workflow skill discovers available tools and supports both workflow and application-pack interfaces. The current release exposes twelve profile, search, document-pack and application-tracking tools. Installation alone does not verify that a tool call succeeds. OfferUnderway is published in Claude's directory as a Community connector, which undergoes automated review and does not carry Anthropic Verified status. The ChatGPT directory listing remains pending developer identity verification and submission.
+Hosted tool availability depends on the deployed server. The bundled workflow skill discovers available tools and supports both workflow and application-pack interfaces. The current release exposes twelve profile, search, document-pack and application-tracking tools. Installation alone does not verify that a tool call succeeds. OfferUnderway is published in Claude's directory as a Community connector, which undergoes automated review and does not carry Anthropic Verified status. OpenAI developer identity verification is complete; the ChatGPT directory listing remains pending upload, automated checks and provider review.
 
 ## Privacy and support
 
