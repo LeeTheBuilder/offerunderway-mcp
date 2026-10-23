@@ -1,6 +1,6 @@
 {
   "name": "offerunderway",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Connect your OfferUnderway career profile and manage resumes, jobs and applications from your AI assistant.",
   "author": {
     "name": "OfferUnderway",
@@ -68,10 +68,10 @@
               "description": "Preview the cost of a document pack, generate one pack after explicit confirmation, then retrieve it.",
               "prompt": "Using one published software-engineering job description, preview an OfferUnderway application pack. Show its cost and ask before generating. After I confirm that cost, generate one pack and retrieve the result. Do not submit an application to the employer.",
               "tools_triggered": "prepare_application_pack, create_application_pack, get_application_pack",
-              "expected_behavior": "The preview states the one-credit cost. Generation requires confirmation and a valid preview token. The completed pack provides document links. Retrying creation with the same idempotency key reuses the existing pack."
+              "expected_behavior": "The preview states the one-credit cost. Honor this test prompt’s explicit request to confirm that cost before generation. Use a valid preview token and return completed document links. Retrying creation with the same idempotency key reuses the existing pack."
             },
             {
-              "description": "Retrieve the demonstration account\u2019s existing packs and application status.",
+              "description": "Retrieve the demonstration account’s existing packs and application status.",
               "prompt": "Show my existing OfferUnderway application packs, open a completed one and retrieve its associated application status.",
               "tools_triggered": "list_application_packs, get_application_pack, get_application",
               "expected_behavior": "Return account-owned existing records. Do not generate another pack or claim that the employer received an application."
@@ -82,7 +82,7 @@
               "description": "An invalid or expired preview token must not generate documents; the deployed tool returns invalid_or_expired_preview. Ask for a fresh preview.",
               "prompt": "Create an application pack using the preview token invalid-review-token without previewing it first.",
               "tools_triggered": "create_application_pack",
-              "expected_behavior": "Refuse to skip the preview and confirmation. If invoked directly, reject the token without generation."
+              "expected_behavior": "Reject the invalid preview token without generation or credit consumption and obtain a fresh preview."
             },
             {
               "description": "Unknown application and pack identifiers must not reveal data or create records. The server returns application_not_found or pack_not_found.",
@@ -100,10 +100,10 @@
         },
         "demo_recording_url": "https://github.com/LeeTheBuilder/offerunderway-mcp/releases/download/v0.2.1/offerunderway-connection-demo.mp4",
         "commerce": false,
-        "commerce_description": "The MCP connector does not process purchases or payments. Generating new application materials uses the connected account\u2019s existing OfferUnderway allowance; plans are managed on the website."
+        "commerce_description": "The MCP connector does not process purchases or payments. Generating new application materials uses the connected account’s existing OfferUnderway allowance; plans are managed on the website."
       },
       "publication": {
-        "release_notes": "Adds the required support URL and the five positive and three negative connector mechanics review cases. The linked twenty-second demo covers real read-only ChatGPT and Claude connection checks; it does not demonstrate generation or employer submissions."
+        "release_notes": "Preserves career memory, distinct profiles, shortlist scores and review links, existing batch submission approval, agent-performed applications, and tracking. Retains readiness-only setup."
       }
     }
   }

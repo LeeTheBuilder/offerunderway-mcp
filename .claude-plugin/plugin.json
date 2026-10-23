@@ -1,6 +1,6 @@
 {
   "name": "offerunderway",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Connect your saved career profile, find jobs, tailor application documents and track applications with OfferUnderway.",
   "author": {
     "name": "OfferUnderway",
@@ -13,7 +13,13 @@
   "privacyPolicyUrl": "https://offerunderway.com/privacy",
   "termsOfServiceUrl": "https://offerunderway.com/terms",
   "icon": "./assets/icon.png",
-  "keywords": ["career", "resume", "jobs", "applications", "mcp"],
+  "keywords": [
+    "career",
+    "resume",
+    "jobs",
+    "applications",
+    "mcp"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }
